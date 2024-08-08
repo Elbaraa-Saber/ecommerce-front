@@ -1,6 +1,9 @@
+import { Outlet } from "react-router-dom";
 import { Container } from "react-bootstrap";
+
+import { Footer, Header } from "@components/shared";
+
 import styles from './styles.module.css';
-import Header from "../../components/shared/Header/Header";
 const {container, wrapper, } = styles;
 
 const MainLayout = () => {
@@ -8,8 +11,9 @@ const MainLayout = () => {
         <Container className={container}>
             <Header/>
             <div className={wrapper}>
-                Your component goes here
+                <Outlet/>
             </div>
+            <Footer/>
         </Container>
     )
 }
